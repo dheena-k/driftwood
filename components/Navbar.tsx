@@ -150,7 +150,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-0 z-40 bg-night-deep transition-all duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-[rgb(111_85_66_/_90%)] transition-all duration-300 lg:hidden ${
           open
             ? "pointer-events-auto visible opacity-100"
             : "pointer-events-none invisible opacity-0"
@@ -158,11 +158,8 @@ export default function Navbar() {
       >
         <div
           className="
-            flex min-h-screen flex-col justify-start
-            px-6
-            sm:px-10
-            md:px-14
-            pt-20
+            flex min-h-[60vh] flex-col justify-[space-evenly] px-6 sm:px-10 md:px-14 pt-20
+            
           "
         >
           <ul className="flex flex-col gap-5 sm:gap-6 md:gap-7">

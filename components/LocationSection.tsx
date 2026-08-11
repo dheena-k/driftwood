@@ -31,24 +31,37 @@ export default function LocationSection() {
                 </div>
               </div>
             </li>
-            <li className="flex items-start gap-4">
-              <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brick/5 text-brick">
-                <Phone size={18} />
-              </span>
-              <div>
-                <div className="text-sm font-semibold text-brick">Phone</div>
-                <div className="text-sm text-charcoal-soft">Add your contact number here</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brick/5 text-brick">
-                <Mail size={18} />
-              </span>
-              <div>
-                <div className="text-sm font-semibold text-brick">Email</div>
-                <div className="text-sm text-charcoal-soft">Add your contact email here</div>
-              </div>
-            </li>
+           <li className="flex items-start gap-4">
+  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brick/5 text-brick">
+    <Phone size={18} />
+  </span>
+
+  <div>
+    <div className="text-sm font-semibold text-brick">Phone</div>
+    <a
+      href="tel:9876543210"
+      className="text-sm text-charcoal-soft hover:text-brick"
+    >
+      9876543210
+    </a>
+  </div>
+</li>
+
+<li className="flex items-start gap-4">
+  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brick/5 text-brick">
+    <Mail size={18} />
+  </span>
+
+  <div>
+    <div className="text-sm font-semibold text-brick">Email</div>
+    <a
+      href="mailto:driftwood@gmail.com"
+      className="text-sm text-charcoal-soft hover:text-brick"
+    >
+      driftwood@gmail.com
+    </a>
+  </div>
+</li>
           </ul>
 
           <a
