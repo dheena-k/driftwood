@@ -158,11 +158,11 @@ export default function Navbar() {
       >
         <div
           className="
-            flex min-h-[60vh] flex-col justify-[space-evenly] px-6 sm:px-10 md:px-14 pt-20
+            flex min-h-[60vh] flex-col justify-[space-evenly] px-6 sm:px-10 md:px-14 pt-20 
             
           "
         >
-          <ul className="flex flex-col gap-5 sm:gap-6 md:gap-7">
+          <ul className="mt-8 flex flex-col gap-5 sm:gap-6 md:gap-7">
             {NAV_LINKS.map((link, i) => (
               <li
                 key={link.href}
