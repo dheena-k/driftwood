@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-charcoal font-body antialiased;
+}
+
+::selection {
+  background-color: #E1A23D;
+  color: #2B2420;
+}
+
+/* Elegant focus ring for accessibility, no default browser outline mismatch */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #E1A23D;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Eyebrow label style used across sections */
+.eyebrow {
+  @apply inline-flex items-center gap-3 text-xs sm:text-sm tracking-widest2 uppercase text-amber-deep font-semibold;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.eyebrow-light {
+  @apply text-amber-light;
+}
+
+/* Scroll reveal: elements start hidden, JS toggles .is-visible on intersection */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1.is-visible { transition-delay: 0.12s; }
+.reveal-delay-2.is-visible { transition-delay: 0.24s; }
+.reveal-delay-3.is-visible { transition-delay: 0.36s; }
+
+/* Signature tide-line divider: a hairline gold wave that draws itself in on scroll */
+.tide-line path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  pathLength: 1;
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tide-line.is-visible path {
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .tide-line path {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
