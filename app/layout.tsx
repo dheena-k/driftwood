@@ -37,7 +37,14 @@ export const metadata: Metadata = {
       "A five-bedroom brick villa in Paramankeni, Cheyyur, with a private pool, rooftop terrace, and garden courtyard.",
     type: "website",
     siteName: "Driftwood Beach Resort",
-     images: ["/images/logo-light.png"],
+      images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Driftwood Beach Resort",
+      },
+    ],
   },
   
 };
