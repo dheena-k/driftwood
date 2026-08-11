@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative flex h-[100svh] min-h-[560px] w-full items-center justify-center overflow-hidden">
       <Image
-        src="/images/exterior-twilight-full.jpg"
+        src="/images/hero-new.jpg"
         alt="Driftwood Beach Resort's brick villa lit up at twilight"
         fill
         priority
